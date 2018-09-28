@@ -1,0 +1,7 @@
+.tweet {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  filter: opacity(60%);
+  margin: 2em;
+  background-color:white
+}
