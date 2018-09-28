@@ -21,6 +21,14 @@ body {
   background-color: #eee;
 }
 
+main.container {
+  background-color: white;
+  margin: 0 auto;
+  padding-bottom: 140px;
+  padding-top: 80px;
+  width: 450px;
+  z-index: 1000;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
