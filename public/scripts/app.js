@@ -99,15 +99,14 @@ $(document).ready(function() {
 
   loadTweets();
 
-  $("#compose-tweet").on("submit", function(event) {
+  $("#compose-tweet").on("submit", function(event) {//
     event.preventDefault();
     let maxCount = 140;
     let currentValue = maxCount - $('textarea').val().length;
-    console.log(currentValue);
     if (maxCount === currentValue) {
-      alert('Tweet cannot be empty!');
+      $("#empty").slideDown(400);
     } else if (currentValue < 0) {
-      alert('Tweet is too Long!');
+      $("#toolong").slideDown(400);
     } else {
       $.ajax({
         type: 'POST',

@@ -32,3 +32,9 @@
 .invalidCount {
   color: red;
 }
+
+.error-msg{
+	color:red;
+	display: none;
+}
+
