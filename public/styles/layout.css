@@ -5,10 +5,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
