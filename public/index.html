@@ -32,13 +32,13 @@
       <span class="header">Tweeter</span>
       <button class = "compose-button" type="button">Compose</button>
     </nav>
-    
+
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id ="compose-tweet" action="/tweets" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="compose-text-area" name="text" placeholder="What are you humming about?"></textarea>
           <input id="submit" type="submit" value="Tweet" >
           <span class="counter">140</span>
         </form>
@@ -64,5 +64,15 @@
         </article>
       </section>
     </main>
+
+    <!-- Compose Button -->
+    <script>
+      $(".compose-button").click(function(){
+        $(".new-tweet").slideToggle("slow");
+        $("#compose-text-area").focus();
+      });
+    </script>
+
+
   </body>
 </html>
