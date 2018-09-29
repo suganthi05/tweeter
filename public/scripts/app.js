@@ -44,6 +44,37 @@ $(document).ready(function() {
     "created_at": 1461113796368
   }];
 
+    const timeSince = (time) => {
+    const curTime = Date.now();
+    const timeDiff = curTime - time;//diff-timeDiff --> diff = now-time
+    const diffMinutes = Math.floor((timeDiff / 1000) / 60);
+    const diffHours = Math.floor(diffMinutes / 60);
+    const diffDays = Math.floor(diffHours / 24);
+    if (diffDays > 365) {
+      return `long time ago`;
+    } else if (diffHours > 23) {
+      if (diffDays === 1) {
+        return `a day ago`;
+      } else {
+        return `${diffDays} days ago`;
+      }
+    } else if (diffMinutes > 59) {
+      if (diffHours === 1) {
+        return `an hour ago`;
+      } else {
+        return `${diffHours} hours ago`;
+      }
+    } else {
+      if (diffMinutes < 1) {
+        return `just now`;
+      } else if (diffMinutes === 1) {
+        return `a minute ago`;
+      } else {
+        return `${diffMinutes} minutes ago`;
+      }
+    }
+  };
+
   //Create Tweet
   const createTweetHeader = (tweetData) => {
     const $header = $("<header>")
@@ -61,7 +92,7 @@ $(document).ready(function() {
 
   const createTweetFooter = (tweetData) => {
     const $footer = $("<footer>")
-      .text("10 mins ago")
+      .text(timeSince(tweetData.created_at))
       .append($("<span class='icons'>")
         .append($("<img src='/images/flag-blue.png'>"))
         .append($("<img src='/images/retweet-blue.png'>"))
