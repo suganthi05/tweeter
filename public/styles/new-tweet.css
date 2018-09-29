@@ -28,3 +28,7 @@
   line-height: 2em;
   padding-right: 5px;
 }
+
+.invalidCount {
+  color: red;
+}

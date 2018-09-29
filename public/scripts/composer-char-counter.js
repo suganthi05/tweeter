@@ -8,10 +8,10 @@ var remainChar =0;
   remainChar = allowedChar - currCharvalue;
   $(".counter").text(remainChar);
   if(currCharvalue >140){
-    $('.counter').addClass("redFont");
+    $('.counter').addClass("invalidCount");
   }
   else{
-    $('.counter').removeClass("redFont");
+    $('.counter').removeClass("invalidCount");
   }
  });
 });
