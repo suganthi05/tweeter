@@ -15,3 +15,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+1. Compose new tweet -https://github.com/suganthi05/tweeter/blob/master/docs/New%20tweet.png
+2. Error message on empty tweet - https://github.com/suganthi05/tweeter/blob/master/docs/Empty%20tweet.png
+3. Error message on long tweet- https://github.com/suganthi05/tweeter/blob/master/docs/Too%20long%20tweet.png
